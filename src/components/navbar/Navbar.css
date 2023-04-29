@@ -161,10 +161,9 @@
     }
 }
 .uzum_search-filter{
-    width: 40.2%;
+    width: auto;
     height: 400px;
     background-color: var(--bg-py);
-    text-align: center;
     padding: 20px;
     position: fixed;
     top: 52px;
@@ -174,5 +173,11 @@
     color: #fff;
     line-height: 30px;
     border-radius: 5px;
+}
+@media screen and (min-width: 1000px) {
+    .uzum_search-filter{
+        width: 20px;
+        margin-right: 300px;
+    }
 }
 
