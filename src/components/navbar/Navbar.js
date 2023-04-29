@@ -60,9 +60,6 @@ function Navbar() {
         const search = e.target.value.toLowerCase()
         const filteredNames = DATA?.filter(names => names.title.toLowerCase().includes(search))
         setNames(filteredNames)
-       if(search.length === 0){
-        return <></>
-       }
     }
     return (
         <>
