@@ -160,3 +160,18 @@
         width: 100%;
     }
 }
+.uzum_search-filter{
+    width: 40.2%;
+    height: 400px;
+    background-color: var(--bg-py);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 52px;
+    z-index: 999;
+    margin-left: 433px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+}
+

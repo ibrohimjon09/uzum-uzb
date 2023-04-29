@@ -4,11 +4,66 @@ import { FiMenu, FiSearch, FiUser, FiX } from 'react-icons/fi'
 import { AiOutlineHeart, AiOutlineShoppingCart, AiOutlineHome } from 'react-icons/ai'
 import { NavLink, Link } from 'react-router-dom'
 import { NAVBAR_BOTTOM_DATA } from '../../static'
-// import { useDispatch } from 'react-redux'
-
+import { useLocation } from "react-router-dom";
+ 
 function Navbar() {
-    // const dispatch = useDispatch()
+ const DATA = [
+    {
+        id: "pro-1",
+        title: "Idishlarni yuvish uchun suyuqlik Fairy, limon, 450 ml",
+    },
+    {
+        id: "pro-2",
+        title: "Xurmo Hаnda Kalooteh dates, 450 g"
+    },
+    {
+        id: "pro-3",
+        title: "Kungaboqar yog'i Shedroe leto, tozalangan, 900 ml",
+    },
+    {
+        id: "pro-4",
+        title: "Xurmo Date Bam, 650 g",
+    },
+    {
+        id: "pro-5",
+        title: "Tualet qozozi Esty, 8 dona",
+    },
+    {
+        id: "pro-6",
+        title: "Sumalak Oq-Tepa Navro'z, 430, 720, 1000 g",
+    },
+    {
+        id: "pro-7",
+        title: "Erkaklar futbolkasi Base Unisex, qisqa yengli",
+    },
+    {
+        id: "pro-8",
+        title: "Palov qozoni Kukmara shisha va shisha bo'lmagan qopqoqli, granit Ultra (moviy) liniyasi",
+    },
+    {
+        id: "pro-9",
+        title: "Chak-chak 'Bol chak-chak briketda', 165 g",
+    },
+    {
+        id: "pro-10",
+        title:
+            "Saxarlik va Iftorlik duolari yozilgan tablichka 'Ramazon' 'Ramadan'",
+    },
+];
+    const [names, setNames] = useState(DATA)
+    const {pathname} = useLocation()
     const [side, setSide] = useState(false);
+    if (pathname.includes("admin")) {
+        return <></>
+    }
+    const filterNames = e => {
+        const search = e.target.value.toLowerCase()
+        const filteredNames = DATA?.filter(names => names.title.toLowerCase().includes(search))
+        setNames(filteredNames)
+       if(search.length === 0){
+        return <></>
+       }
+    }
     return (
         <>
             <div className='navbar container'>
@@ -24,7 +79,7 @@ function Navbar() {
                 </button>
                 
                 <div className="nav__search">
-                    <input type="text" placeholder='Qidirish' />
+                    <input type="text" placeholder='Qidirish' onChange={(e) => filterNames(e)} />
                     <button>
                         <FiSearch />
                     </button>
@@ -62,6 +117,15 @@ function Navbar() {
                         <span>Savatcha</span>
                     </NavLink>
                 </div>
+            </div>
+            <div className="uzum_search-filter">
+            <ul>
+                        {
+                            names?.map(name => {
+                                return <li key={name.id}>{name.title}</li>
+                            })
+                        }
+            </ul>
             </div>
             <div className="nav__bottom container">
                 {

@@ -1,0 +1,21 @@
+.sidebar{
+    height: 100%;
+    background-color: dodgerblue;
+    padding: 30px;
+    color: #fff;
+}
+.sidebar h2{
+    margin-bottom: 50px;
+}
+.sidebar_link{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+.sidebar_link.active{
+    background-color: #fff;
+    color: dodgerblue;
+}

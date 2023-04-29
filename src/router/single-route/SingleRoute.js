@@ -21,7 +21,7 @@ function SingleRoute() {
                     <div className="cart__card-num">
                         <button
                             className="cart__num-btn">-</button>
-                        <span>{}</span>
+                        <span>{1}</span>
                         <button
                             className="cart__num-btn">+</button>
                     </div>
@@ -43,6 +43,7 @@ function SingleRoute() {
                     </button>
                 </div>
             </div>
+            
         </div>
     )
 }

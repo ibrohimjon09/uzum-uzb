@@ -3,7 +3,8 @@ import {
     ADD_TO_CART,
     DEL_FROM_CART,
     DEL_FROM_HEART,
-    DEC_FROM_CART
+    DEC_FROM_CART,
+    DELETE_ALL_CART
 } from "./actionType"
 
 export const addToHeart = (payload) => {
@@ -27,3 +28,8 @@ export const removeFromCart = (payload) => {
 export const decFromCart = (payload) => {
     return { type: DEC_FROM_CART, payload }
 }
+
+export const deleteAllCart = () => {
+    return { type: DELETE_ALL_CART }
+}
+
