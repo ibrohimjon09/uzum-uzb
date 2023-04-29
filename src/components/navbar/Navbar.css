@@ -174,10 +174,5 @@
     line-height: 30px;
     border-radius: 5px;
 }
-@media screen and (min-width: 1000px) {
-    .uzum_search-filter{
-        width: 20px;
-        margin-right: 300px;
-    }
-}
+
 
