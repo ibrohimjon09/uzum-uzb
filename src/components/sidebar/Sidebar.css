@@ -19,3 +19,18 @@
     background-color: #fff;
     color: dodgerblue;
 }
+.go_to-home{
+    width: 200px;
+    height: 45px;
+    border: none;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+}
+.go_to-home:Hover{
+    background-color: #fff;
+    color: dodgerblue;
+    transition: .3s;
+}

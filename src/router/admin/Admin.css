@@ -8,27 +8,3 @@
 .admin_content{
     padding: 30px;
 }
-.create-product input{
-    display: block;
-    margin-bottom: 15px;
-    width: 300px;
-    padding: 6px 10px;
-    border: 2px solid  var(--bg-py);
-    border-radius: 3px;
-    outline: none;
-}
-.create-product button{
-    display: block;
-    margin-bottom: 15px;
-    width: 300px;
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--bg-py);
-    height: 40px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 18px;
-}
-form{
-    margin-top: 20px;
-}

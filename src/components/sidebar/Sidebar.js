@@ -8,7 +8,7 @@ function Sidebar() {
   const navigate = useNavigate()
   return (
     <div className='sidebar'>
-       <button onClick={()=> navigate("/")}>go home</button>
+       <button className='go_to-home' onClick={()=> navigate("/")}>go home</button>
         <h2>Admin Dashboard</h2>
          <ul>
             <li>

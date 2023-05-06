@@ -50,7 +50,7 @@ function Navbar() {
             "Saxarlik va Iftorlik duolari yozilgan tablichka 'Ramazon' 'Ramadan'",
     },
 ];
-    const [names, setNames] = useState(DATA)
+    const [names, setNames] = useState([])
     const {pathname} = useLocation()
     const [side, setSide] = useState(false);
     if (pathname.includes("admin")) {
@@ -60,6 +60,9 @@ function Navbar() {
         const search = e.target.value.toLowerCase()
         const filteredNames = DATA?.filter(names => names.title.toLowerCase().includes(search))
         setNames(filteredNames)
+    }
+    const handleBlur = () => {
+        setNames([])
     }
     return (
         <>
@@ -76,7 +79,7 @@ function Navbar() {
                 </button>
                 
                 <div className="nav__search">
-                    <input type="text" placeholder='Qidirish' onChange={(e) => filterNames(e)} />
+                    <input type="text" placeholder='Qidirish' onBlur={handleBlur} onChange={(e) => filterNames(e)} />
                     <button>
                         <FiSearch />
                     </button>
@@ -115,6 +118,8 @@ function Navbar() {
                     </NavLink>
                 </div>
             </div>
+            {
+                names.length != 0 && (
             <div className="uzum_search-filter">
             <ul>
                         {
@@ -124,6 +129,8 @@ function Navbar() {
                         }
             </ul>
             </div>
+                )
+            }
             <div className="nav__bottom container">
                 {
                     NAVBAR_BOTTOM_DATA?.map((e, inx) => (

@@ -161,18 +161,26 @@
     }
 }
 .uzum_search-filter{
-    width: auto;
-    height: 400px;
-    background-color: var(--bg-py);
+    width: 40.2%;
+    padding: 15px 0;
+    background-color: #fff;
     padding: 20px;
     position: fixed;
     top: 52px;
     z-index: 999;
     margin-left: 433px;
-    font-size: 18px;
-    color: #fff;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
     line-height: 30px;
     border-radius: 5px;
+    box-shadow: 1px 1px 20px #313131;
+}
+.uzum_search-filter li{
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
 }
 
+.uzum_search-filter li:last-child {
+    border-bottom: none;
+}
 
